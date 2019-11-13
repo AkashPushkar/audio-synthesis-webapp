@@ -1,0 +1,27 @@
+
+/*Horizontal scroll bar CSS*/
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu label {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu label:hover {
+  background-color: #777;
+}
+
+
+
+/*Video-js CSS*/
+/* change player background color */
+#myAudio_recorded {
+  background-color: #9FD6BA;
+}
