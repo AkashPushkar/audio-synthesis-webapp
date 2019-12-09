@@ -1,0 +1,14 @@
+# files
+*.pyc
+*.swp
+config.json
+
+# folder 
+__pycache__
+media/
+utils/models
+utils/demo_output
+utils/inputsample
+
+# database
+db.sqlite3

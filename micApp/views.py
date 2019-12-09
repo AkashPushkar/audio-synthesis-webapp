@@ -5,7 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.files.storage import FileSystemStorage
 
 
-from utils import backend
+# from utils import backend
 
 
 import pdb
@@ -28,17 +28,20 @@ def about(request):
 
 @csrf_exempt
 def uploads(request):
+	# pdb.set_trace()
 	file = request.FILES['file']
 
 
 	fs = FileSystemStorage()
 	fs.save(file.name, file)
-
-	in_video = file.file.getvalue()
-	x = backend.convert(in_video)
+	# pdb.set_trace()
+	in_video = file.read()
+	# x = backend.convert(in_video)
 	
 
-	response = HttpResponse(x, content_type="video/webm")
+	# Name = request.FILES['file'].name
+
+	response = HttpResponse(in_video, content_type="video/webm")
 	response['Content-Disposition'] = 'attachment'
 	
 	# pdb.set_trace()

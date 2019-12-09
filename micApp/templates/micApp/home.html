@@ -93,7 +93,7 @@
 		{% for image in images %}
 		<label class="radio-inline"> 
 			<img src="{% static 'micApp/images/'%}{{image}}" alt=" {{ image }} " height="84" width="84">
-			<input type="radio" name="season" id="seasonWinter" value="winter">
+			<input type="radio" name="personality-name" value="{{ image|slice:-4 }}">
 			{{ image|slice:-4 }}
 		</label>
 		{% endfor %}
