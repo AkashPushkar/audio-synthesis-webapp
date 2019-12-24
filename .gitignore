@@ -2,6 +2,9 @@
 *.pyc
 *.swp
 config.json
+certname.key
+certname.crt
+
 
 # folder 
 __pycache__
@@ -9,6 +12,7 @@ media/
 utils/models
 utils/demo_output
 utils/inputsample
+env
 
 # database
 db.sqlite3

@@ -27,12 +27,6 @@ $(document).ready(function(){
       }
   };
 
-  // var options_player_output = {
-  //     controls: true
-  //     fluid: false
-  //     width: 320,
-  //     height: 240
-  // };
 
 
   // apply some workarounds for certain browsers

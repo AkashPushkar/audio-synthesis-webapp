@@ -12,11 +12,11 @@ from scipy.fftpack import dct
 from tensorboardX import SummaryWriter
 from torch.autograd import Variable
 
-from audioUtils.audio import wav2seg, inv_preemphasis, preemphasis
-from model_video import VideoGenerator, STAGE2_G
-from audioUtils.hparams import hparams
-from audioUtils import audio
-from vocoder.models.fatchord_version import WaveRNN
+from utils.audioUtils.audio import wav2seg, inv_preemphasis, preemphasis
+from utils.model_video import VideoGenerator, STAGE2_G
+from utils.audioUtils.hparams import hparams
+from utils.audioUtils import audio
+from utils.vocoder.models.fatchord_version import WaveRNN
 import cv2
 
 _inv_mel_basis = np.linalg.pinv(audio._build_mel_basis(hparams))

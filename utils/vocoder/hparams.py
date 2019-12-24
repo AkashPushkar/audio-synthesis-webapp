@@ -1,4 +1,4 @@
-from audioUtils.hparams import hparams as _syn_hp
+from utils.audioUtils.hparams import hparams as _syn_hp
 
 
 # Audio settings------------------------------------------------------------------------

@@ -1,3 +1,15 @@
+function toggleLoading() {
+	if (document.getElementById('loadingmsg').style.display == 'block'){
+		document.getElementById('loadingmsg').style.display = 'none';
+    	document.getElementById('loadingover').style.display = 'none';
+	} else {
+		document.getElementById('loadingmsg').style.display = 'block';
+    	document.getElementById('loadingover').style.display = 'block';
+	}
+    
+}
+
+
 function return_video(){
 
 	// the blob object contains the recorded data that
@@ -35,20 +47,21 @@ function return_video(){
 	formData.append('file', data, name_data);
 
 
-
-	
-
+	toggleLoading()
 	// console.log('uploading recording:', data.name);
 
 	fetch(serverUrl, {
 	    method: 'POST',
 	    body: formData
 	}).then(function(response){
-				return response.blob();
+			// var blob = new Blob(response, type="wave")
+			return response.blob();
 	}).then(function(response){
 			var url = URL.createObjectURL(response)
 	    	document.getElementById("return_video").src = url;
-	    	console.log('recording upload complete.');
+	    	// document.getElementById("return_video").load();
+	    	toggleLoading()
+	    	// console.log('recording upload complete.');
 	    // success => console.log('recording upload complete.')
 	}).catch(
 	    error => console.error('an upload error occurred!')

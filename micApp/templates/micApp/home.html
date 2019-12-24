@@ -39,8 +39,6 @@
 
 
 <body>
-
-
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
 
@@ -51,7 +49,7 @@
 		</div>
 
 		<div class="mx-auto order-0">
-	        <a class="navbar-brand mx-auto" href="#">Website Name</a>
+	        <a class="navbar-brand mx-auto" href="#">Audiocon</a>
 	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
 	            <span class="navbar-toggler-icon"></span>
 	        </button>
@@ -72,18 +70,9 @@
 
 
 	<div class="container">
-		<div class="row">
-			<div class="alert alert-primary text-center" role="alert">
-	 			Alert! This is a beta app for NLP style transfer. Please contact the author of the paper in case of any suggestions for the website at aayushb@andrew.cmu.edu 
-			</div>
-		</div>
-	</div>
-
-
-	<div class="container">
-		<div class="row">
+		<div class="row mt-4">
 			<div class="col-sm-12">
-				<h3>Eminem: "I say what I want to say". But we make them say what you want them to say.</h3>
+				<h3>1. Select a target speaker</h3>
 			</div>
 		</div>
 	</div>
@@ -105,7 +94,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<h3>What do you want them to say ? Record here.</h3>
+				<h3>2. What do you want them to say? Record here or upload a file.</h3>
 			</div>
 		</div>
 	</div>
@@ -113,39 +102,62 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6">
-				<audio id="myAudio_recorded" class="video-js vjs-default-skin"></audio>
+			<div class="col-sm-6 d-flex justify-content-center">
+					<audio id="myAudio_recorded" class="video-js vjs-default-skin"></audio>
 			</div>
 
-			<div class="col-sm-6">
+			<div class="col-sm-6 d-flex justify-content-center">
 				<form>
-					<input id="myAudio_uploaded" type="file" name="">
+					<video height="240" width="320" controls id="return_video" type="video/webm"></video>
 				</form>
 			</div>	
 		</div>
 	</div>
 
-
 	<div class="container">
-		<div class="row">
+		<div class="row mt-3">
+			<div class="col-sm-6  d-flex justify-content-center">
+				<input id="myAudio_uploaded" type="file">
+			</div>
+		</div>		
+	</div>
+
+
+	<div id='loadingmsg' style='display: none;'>Loading, please wait...</div>
+	<div id='loadingover' style='display: none;'></div>
+
+<!-- 
+	<div class="container">
+		<div class="row mt-4 d-flex justify-content-center">
 			<div class="col-sm-6">
-				<video id="return_video" height="240" width="320" controls></video>
+
+				
+				<audio controls>
+					<source id="return_video" type="audio/wav">
+				</audio>
+				<audio  controls>
+					<source id="return_video" type="audio/wav" src="static/micApp/result1.wav">
+				</audio>
 			</div>
 		</div>
+	</div> -->
+	
+	<div class="container ">
+		<div class="row mt-4 d-flex justify-content-center">
+				<button id="b1" type="button" class="btn btn-primary btn-lg" onclick="return_video()"> Click Me !!! </button>
+		</div>
 	</div>
-	
-			
 
-	
 
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-4">
-				<button id="b1" type="button" onclick="return_video()">Click Me</button>
+		<div class="row mt-4">
+			<divc class="col-sm-12">
+				<div class="alert alert-primary text-center" role="alert">
+		 			<p>Please contact <a href="http://www.cs.cmu.edu/~aayushb/">Aayush Bansal</a> in case of any suggestions for the website </p>  
+				</div>	
 			</div>
 		</div>
 	</div>
-
 
 	<!-- Bootstrap CDN -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

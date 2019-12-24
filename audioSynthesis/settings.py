@@ -14,7 +14,8 @@ import os
 import json
 
 
-with open('audioSynthesis/config.json') as config_file:
+# with open('home/apushkar/audio-synthesis-webapp/audioSynthesis/config.json') as config_file:
+with open('/home/apushkar/audio-synthesis-webapp/audioSynthesis/config.json') as config_file:
     config = json.load(config_file)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -31,7 +32,7 @@ SECRET_KEY = config['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0','localhost','128.2.194.102', '127.0.0.1','scs00197.sp.cs.cmu.edu']
 
 
 # Application definition
@@ -123,7 +124,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

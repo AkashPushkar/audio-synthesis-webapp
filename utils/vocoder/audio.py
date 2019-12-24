@@ -1,7 +1,7 @@
 import math
 import numpy as np
 import librosa
-import vocoder.hparams as hp
+import utils.vocoder.hparams as hp
 from scipy.signal import lfilter
 
 
